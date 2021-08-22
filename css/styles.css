@@ -7,7 +7,6 @@
 }
 
 body {
-  background-color: var(--main-title-color);
   color: var(--main-text-color);
   font-family: 'Roboto', sans-serif;
 }
@@ -39,12 +38,16 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  /* justify-content: flex-end; */
+  /* display: flex; */
 }
 .header {
-  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+}
+.header > a {
+  padding-top: 31px;
+  padding-bottom: 31px;
 }
 
 .contacts-list a {
@@ -75,8 +78,6 @@ a {
 .navigation-list,
 .contacts-list {
   display: flex;
-  padding-top: 31px;
-  padding-bottom: 31px;
 }
 .contacts-list {
   margin-left: auto;
@@ -105,8 +106,10 @@ a {
 /* Hero */
 .hero {
   background-color: var(--secondary-text-color);
-  height: 600px;
+  /* height: 600px; */
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-text {
   font-style: normal;
@@ -117,7 +120,7 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  padding-top: 200px;
+  /* padding-top: 200px; */
   width: 696px;
   margin: auto;
 }
@@ -134,12 +137,16 @@ a {
   color: #ffffff;
   width: 200px;
   height: 50px;
-  margin-top: 46px;
+  margin-top: 45px;
 }
 /* Hang */
+.hang {
+  padding-bottom: 94px;
+  padding-top: 94px;
+  /* outline: 2px solid tomato; */
+}
 .hang-list {
   display: flex;
-  margin-top: 92px;
 }
 .hang-title {
   font-style: normal;
@@ -149,7 +156,7 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .hang-text {
   font-style: normal;
@@ -159,6 +166,16 @@ a {
   letter-spacing: 0.03em;
   color: #757575;
 }
+
+.hang-item:not(last-child) {
+  margin-right: 30px;
+}
+/* Ocupation */
+.occupation {
+  /* outline: 2px solid tomato; */
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
 .section-title {
   font-style: normal;
   font-weight: bold;
@@ -167,26 +184,24 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  margin-top: 50px;
+  padding-bottom: 50px;
 }
-.hang-item:not(last-child) {
-  margin-right: 30px;
-}
-/* Ocupation */
-.section-title {
-  margin-top: 10px;
-}
-.occupation {
+
+.occupation-list {
   display: flex;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .occupation-item:not(last-child) {
   margin-right: 20px;
 }
 /* Our team */
-.team {
-  margin-top: 30px;
+.our-team {
+  background-color: var(--main-title-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /* outline: 2px solid tomato; */
 }
+
 .team-list {
   display: flex;
 }
@@ -219,12 +234,15 @@ a {
 .logo-white {
   color: #ffffff;
 }
-.footer {
+.footer-all {
   background-color: var(--secondary-text-color);
-  padding: 60px;
+}
+.footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .address {
   font-style: normal;
@@ -243,10 +261,17 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 /* Portfolio */
-.filter button {
+.portfolio-content {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.filter {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.filter .button {
   background: #f5f4fa;
   border-radius: 4px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -255,6 +280,8 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  border: 0;
+  padding: 10px;
 }
 .portfolio-title {
   font-style: normal;
@@ -272,26 +299,36 @@ a {
   letter-spacing: 0.03em;
   color: var(--main-text-color: );
 }
-.active:active {
+.active:active,
+.active:hover {
   background-color: var(--accent-color);
+  color: #fff;
 }
 .text-container {
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 1200px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
   margin-left: auto;
   margin-right: auto;
 }
 .list-portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
 }
 .list-portfolio > .item {
   width: 100%/3 - 30px;
-  /* outline: 2px solid tomato; */
+  border: 1px solid #eeeeee;
   margin-left: 30px;
   margin-top: 30px;
+}
+.list-portfolio > .item:nth-child(3n + 1) {
+  margin-left: 0;
 }
 .card-content {
   padding-top: 20px;
