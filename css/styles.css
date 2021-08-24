@@ -239,7 +239,7 @@ a {
   color: #ffffff;
 }
 .footer-item {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 .footer-all {
   background-color: var(--secondary-text-color);
@@ -278,6 +278,7 @@ a {
 .filter {
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 50px;
 }
 .filter .button {
   background: #f5f4fa;
